@@ -1,0 +1,16 @@
+# dbt_jaffle_shop/models/marts/metricflow_time_spine.yml
+
+version: 2
+
+models:
+  - name: metricflow_time_spine
+    description: "The central time spine model for the dbt Semantic Layer / MetricFlow."
+    
+    # This block satisfies the required MetricFlow configuration
+    time_spine:
+      standard_granularity_column: date_day 
+
+    columns:
+      - name: date_day
+        description: "The primary daily date column."
+        granularity: day # Tells MetricFlow the base grain of the spine
