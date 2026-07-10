@@ -1,3 +1,14 @@
+# Useful commands:
+
+```
+dbt-autofix deprecations --semantic-layer
+
+dbt parse                      # builds the semantic manifest
+dbt sl list metrics             # see every metric you've defined
+dbt sl list dimensions --metrics revenue   # what you can group revenue by
+dbt sl query --metrics revenue --group-by metric_time__month
+```
+
 # 🥪 The Jaffle Shop 🦘
 
 This is a sandbox project for exploring the basic functionality and latest features of dbt. It's based on a fictional restaurant called the Jaffle Shop that serves [jaffles](https://en.wikipedia.org/wiki/Pie_iron).
