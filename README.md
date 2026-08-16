@@ -1,5 +1,14 @@
-# Useful commands:
+# Setup Snowflake
+```sql
+USE ROLE SYSADMIN;
 
+CREATE DATABASE DEV_ANALYTICS;
+```
+# Useful commands:
+Test dbt with Snowflake:
+```
+dbt seed --full-refresh --vars '{"load_source_data": true}'
+```
 ```
 dbt-autofix deprecations --semantic-layer
 
